@@ -1,16 +1,20 @@
 <template>
   <div class="">
-    homepage
+    <mall></mall>
   </div>
 </template>
 <script>
+  import mall from './mall'
+
   export default {
     data () {
       return {}
     },
     name: 'Homepage',
     methods: {},
-    components: {}
+    components: {
+      mall
+    }
   }
 
 </script>

@@ -1,10 +1,8 @@
 <template>
   <div class="">
-    <mall></mall>
   </div>
 </template>
 <script>
-  import mall from './mall'
 
   export default {
     data () {
@@ -12,9 +10,7 @@
     },
     name: 'Homepage',
     methods: {},
-    components: {
-      mall
-    }
+    components: {}
   }
 
 </script>

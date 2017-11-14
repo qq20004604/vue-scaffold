@@ -125,14 +125,6 @@
         category.propertyList.push(category.newPropertyName)
         category.newPropertyName = ''
       },
-      output () {
-        let foo = {}
-        this.categoryList.forEach(item => {
-          foo[item.name] = item.propertyList
-        })
-        console.log(foo)
-        return foo
-      },
       // 递归
       getList () {
         console.log(this.showList)

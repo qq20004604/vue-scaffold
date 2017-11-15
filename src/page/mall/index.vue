@@ -53,6 +53,9 @@
         </tr>
       </table>
     </div>
+
+    <p>输出结果：</p>
+    <p>{{result}}</p>
   </div>
 </template>
 <style scoped>
@@ -104,7 +107,8 @@
             name: '类型',
             propertyList: ['衣服', '裤子']
           }
-        ]
+        ],
+        'result': ''
       }
     },
     computed: {
@@ -137,6 +141,7 @@
       // 递归
       getList () {
         console.log(this.showList)
+        this.result = this.showList
         return this.showList
       },
       // 将数据组合成列表，利用递归的特性

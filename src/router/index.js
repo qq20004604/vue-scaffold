@@ -50,7 +50,8 @@ router.beforeEach((to, from, next) => {
         next()
       } else {
         store.commit('updateNextPage', to.fullPath)
-        next({path: '/m/login'})
+        // todo 这里写登录页面的url地址
+        next({path: '/login'})
       }
     }
   } else {

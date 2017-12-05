@@ -17,6 +17,7 @@ let store = {
       state.userId = payload.userId
       localStorage.timeout = Number(new Date()) // 过期时间
     },
+    // 清除登录状态的时候，不调用这个，而是调用src/common/js/token.js里面的cleanToken方法
     cleanUserState (state) {
       state.token = ''
       state.userId = ''

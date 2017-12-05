@@ -6,7 +6,7 @@ import App from './App'
 import router from './router'
 import 'common/less/config.less'
 import http from './api/index'
-import store from './store'
+import store from './store/store'
 import forDevelopment from './plugin/forDevelopment'
 
 Vue.config.productionTip = false

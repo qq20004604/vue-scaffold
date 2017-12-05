@@ -21,6 +21,8 @@ let store = {
       state.token = ''
       state.userId = ''
       localStorage.timeout = ''
+      localStorage.userId = ''
+      localStorage.token = ''
     }
   }
 }

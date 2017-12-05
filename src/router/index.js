@@ -2,6 +2,8 @@ import Vue from 'vue'
 import Router from 'vue-router'
 // PC端组件
 import HomePage from 'page/Homepage'
+import userInfo from 'page/user_info'
+import login from 'page/login'
 // PC端组件
 import NotFound from 'page/404'
 import store from '../store/store'
@@ -17,6 +19,19 @@ const router = new Router({
       name: 'HomePage',
       path: '/',
       component: HomePage
+    },
+    {
+      name: 'login',
+      path: '/login',
+      component: login
+    },
+    {
+      meta: {
+        requireAuth: true
+      },
+      name: 'userInfo',
+      path: '/userInfo',
+      component: userInfo
     },
     {
       path: '*',
@@ -50,7 +65,7 @@ router.beforeEach((to, from, next) => {
         next()
       } else {
         store.commit('updateNextPage', to.fullPath)
-        next({path: '/m/login'})
+        next({path: '/login'})
       }
     }
   } else {

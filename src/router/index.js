@@ -45,7 +45,7 @@ router.beforeEach((to, from, next) => {
     if (store.state.userInfo.token) {  // 通过vuex state获取当前的token是否存在
       next()
     } else {
-      store.commit('updateUser', getToken())
+      store.commit('updateUserByToken', getToken())
       if (store.state.userInfo.token) {  // 通过vuex state获取当前的token是否存在
         next()
       } else {

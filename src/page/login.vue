@@ -34,7 +34,7 @@
           // todo 这里写默认情况下登录后的页面
           url = ''
         }
-        this.$store.commit('updateUser', {
+        this.$store.commit('updateUserByLogin', {
           token: '1',
           userId: '2'
         })
